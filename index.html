@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jhon Andrei Defiesta | Virtual Assistant</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<script> 
+  const lightbox = 
+  document.getElementById("lightbox");
+  const lightboxImg = 
+  document.getElementById("lightbox-img");
+  const closeBtn =
+  document.querySelector(".close");
+
+  document.querySelectorAll(".service-image img").forEach(img => {
+    img.addEventListener("click", () => {
+      lightbox.style.display =  
+      "block";
+      lightboxImg.src = img.src;
+    });
+  });
+
+  closeBtn.onclick = function () {
+    lightbox.style.display = "none";
+  };
+
+  window.onclick = function (event)
+  {
+    if (event.target === lightbox) {
+      lgihtbox.style.display = "none";
+    }
+  };
+ </script>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="fade-in-text">Hi, I’m <span>Jhon Andrei Defiesta</span></h1>
+      <p class="fade-in-text2">Your Reliable Virtual Assistant</p>
+      <a href="#contact" class="btn fade-in-text6" >Hire Me</a>
+    </div>
+  </header>
+
+  <section id="about" class="container">
+    <h2 class="fade-in-text3">About Me</h2>
+    <p class="fade-in-text4">
+      I'm a virtual assistant helping business owners save time and stay productive. With experience in admin support, customer service, and content management, I offer flexible and reliable assistance tailored to your needs.
+    </p>
+  </section>
+
+  <section id="services" class="container">
+    <h2 class="fade-in-text5">My Services</h2>
+    <ul>
+      <li class="fade-in-text4">📧 Email & Calendar Management</li>
+      <p class="fade-in-text3">I organize and reply to emails, declutter inbox, and manage communication efficiently.</p>
+      <button class="toggle-btn"> Close Sample</button>
+      <div class="service-image">
+        <img src="207970-email-management.jpg" alt="Email Sample 2">
+        <img src="Screenshot (11).png" alt="Email Sample 1">
+        
+      </div>
+      </div>
+      <li>🗂️ Data Entry & File Organization</li>
+      <P>i accurately input, update, and organize data and files to ensure efficient digital Workspace management and quick access to important infomation</P>
+       <button class="toggle-btn"> Close Sample</button>
+      <div class="service-image">
+        <img src="Screenshot (13).png" alt="Data Entry Sample 1">
+        <img src="Screenshot (14).png" alt="Date Entry Sampple 2">
+      </div>
+      <div class="service-image">
+        <img src="1_s03m494n-sTqkH-jVnpAyw.jpg" alt="Data Entry Sample 3">
+        <img src="images.png" alt="Data Entry Sample 4">
+      </div>
+      <li>🧠 Research & Report Preparation</li>
+      <p>I conduct thorough research and create clear, organized reports to help clients make informed decisions efficiently.</p>
+       <button class="toggle-btn">Close Sample</button>
+      <div class="service-image">
+        <img src="Screenshot (15).png" alt="Research & Report Preparation Sample 1">
+        <img src="Screenshot (19).png" alt="Research & Report Preparation  Sample 2">
+      </div>
+       <p>→ Another Examples of Reseacrh About Market trends with links</p>
+      <div class="service-image">
+        <img src="Screenshot (20).png" alt="Research & Report Preparation Sample 3">
+        <img src="Screenshot (17).png" alt="Research & Report Preparation Sample 4">
+      </div>
+    </ul>
+  </section>
+
+  <section id="tools" class="container">
+  <ul>
+    <h2>🧰Tools I Use</h2>
+    <li>→Google Workspace</li>
+    <li>→Slack</li>
+    <li>→Canva</li>
+    <li>→Trello</li>
+    <li>→Google Meet</li>
+    <li>→Microsoft Excel</li>
+    <li>→Notion</li>
+    <li>→Google Calendar</li>
+  </ul>
+  </section>  
+
+
+  <section id="contact" class="container">
+    <h2>Interested? Contact Me</h2>
+    <p>📧 Email: <a href="mailto:jcparker2122@gmail.com">jcparker2122@gmail.com</a></p>
+    <p>📞 Phone: 09977265917</p>
+    <p>Instagram Acc: @jhonandreidefiesta</p>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Jhon Andrei Defiesta.  All Rights Reserved.</p>
+    </div>
+  </footer>
+  <script>
+    const toggleBtns = 
+    document.querySelectorAll(".toggle-btn");
+
+    toggleBtns.forEach((btn) => { btn.addEventListener("click", () => { 
+        const imageDiv =
+         btn.nextElementSibling;
+        imageDiv.style.display = 
+        imageDiv.style.display === "block" ? "none" : "block" 
+        });
+     });
+</script>
+<div id="lightbox" class="lightbox">
+  <span class="close">&times;</span>
+  <img class="lightbox-content"
+  id="lightbox-img">
+</div>
+<script>
+  document.querySelectorAll(".service-image img").forEach(img => {
+    img.addEventListener("click", function() {
+      const lightbox = 
+      document.getElementById("lightbox");
+      const lightboxImg = 
+      document.getElementById("lightbox-img");
+
+      lightbox.style.display + 
+      "block";
+      lightboxImg.src = this.src;
+    });
+  });
+
+
+  document.querySelector(".close").addEventListener("click", function() {
+    document.getElementById("lightbox").style.display = "none";
+  })
+</script>
+</body>
+</html>
